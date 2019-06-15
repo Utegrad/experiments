@@ -1,6 +1,6 @@
 import os
 
-ROOT_PATH = os.path.dirname(__file__)
+ROOT_PATH = os.path.abspath(os.path.dirname(__file__))
 
 
 def ls(container):
@@ -30,7 +30,7 @@ def get_new_path(container, original_container, new_root):
 
 
 def traverse():
-    get_new_path(os.path.abspath(ROOT_PATH), os.path.abspath(ROOT_PATH), "C:\\Temp")
+    get_new_path(ROOT_PATH, ROOT_PATH, "C:\\Temp")
 
 
 if __name__ == '__main__':
